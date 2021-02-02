@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="n">Fade Toggle</button>
+    <button id="o">Fade TO</button>
+
+    <div id="a" style="height: 100px;display:none;width: 100px;background-color: blue;margin-top: 30px;"></div><br>
+    <div id="b" style="height: 100px;display:none;width: 100px;background-color: black;"></div><br>
+    <div id="c" style="height: 100px;display:none;width: 100px;background-color: red;"></div><br>
+    
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        $("#n").click(function(){
+            $("#a").fadeToggle(400,function(){
+                console.log("Trnx Completed");//Change log to Alert to see result of this function
+            });
+            $("#b").fadeToggle("slow",function(){
+                console.log("Trnx Completed");
+            });
+            $("#c").fadeToggle(3000);
+        }),
+        $("#o").click(function(){
+            $("#a").fadeTo(1000,0.1);
+            $("#b").fadeTo(2000,0.3);
+            $("#c").fadeTo(3000,0.5);
+        })
+    })
+</script>
