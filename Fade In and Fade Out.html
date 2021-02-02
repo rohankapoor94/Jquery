@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        $("#z").click(function(){
+            $("#a").fadeIn(1000);
+            $("#b").fadeIn(2000);
+            $("#c").fadeIn(3000);
+        })
+        $("#reset").click(function(){
+            location.reload(true);            
+        })
+        $("#y").click(function(){
+            $("#d").fadeOut();
+            $("#e").fadeOut("slow");
+            $("#f").fadeOut(3000);
+        })
+    })
+</script>
+<body>
+    
+        <button id="z">Fade In</button>
+        <button id="y">Fade Out</button>
+        <button id="reset">Reset</button>
+
+        <div id="a" style="height: 100px;display:none;width: 100px;background-color: blue;margin-top: 30px;"></div><br>
+        <div id="b" style="height: 100px;display:none;width: 100px;background-color: black;"></div><br>
+        <div id="c" style="height: 100px;display:none;width: 100px;background-color: red;"></div><br>
+        <div id="d" style="height: 100px;width: 100px;background-color: blue;margin-top: 30px;"></div><br>
+        <div id="e" style="height: 100px;width: 100px;background-color: black;"></div><br>
+        <div id="f" style="height: 100px;width: 100px;background-color: red;"></div><br>
+</body>
+</html>
