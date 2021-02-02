@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="jquery-3.5.1.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    $(document).ready(function(){
+        $("input").keydown(function(){
+            $(this).css("background-color","red");
+        })
+        $("input").keyup(function(){
+            $(this).css("background-color","pink")
+        })
+        $("input").keypress(function(){
+            $(this).css("background-color","yellow")
+        })
+    })
+</script>
+<body>
+        
+    <input type="text">
+</body>
+</html>
