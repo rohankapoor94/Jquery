@@ -17,9 +17,9 @@
             location.reload(true);            
         })
         $("#y").click(function(){
-            $("#d").fadeOut();
-            $("#e").fadeOut("slow");
-            $("#f").fadeOut(3000);
+            $("#d").fadeOut();//Default value is 400ms if Left Empty
+            $("#e").fadeOut("slow");//only two Values Possible Fast / Slow
+            $("#f").fadeOut(3000);// Any Value in ms
         })
     })
 </script>
