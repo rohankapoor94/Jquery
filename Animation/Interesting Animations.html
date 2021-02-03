@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click</button>
+    <div style="height: 100px;width: 100px;position: absolute;background-color:blue;">Hello</div>
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        $("button").click(function(){
+            $("div").animate({height:"300px",fontSize:"40px",opacity:"0.5"},"slow");
+            $("div").animate({width:"300px",fontSize:"80px",opacity:"1"},"slow");
+            $("div").animate({height:"100px",fontSize:"100px",opacity:"0.5"},"slow");
+            $("div").animate({width:"100px",fontSize:"40px",opacity:"1"},"slow");
+        })
+    })
+</script>

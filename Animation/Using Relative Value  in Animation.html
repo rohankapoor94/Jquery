@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button>
+
+    <div style="width: 100px;height: 100px;background-color: blue;position: absolute;"></div>
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("div").animate({
+                width: "100px",//Show or  Hide like before and Toggle 
+                height:"toggle",
+                opacity:"0.9",
+                left:"200px"
+            });
+        })
+    })
+</script>
+
+
+//position Absolute Is Must in animation Ques.............
