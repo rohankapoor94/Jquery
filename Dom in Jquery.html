@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="d"><b>Click ME</b> </button>
+    <input type="text">
+    <button id="e">casH</button>
+    <a href="www.xyzmovies.com" >Download Movies</a>
+    <button id="f">casH</button>
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        // $("button").click(function(){
+        //     alert($("button").html());
+        // })
+        $("#d").click(function(){
+            alert($("#d").text());
+        })
+        $("#e").click(function(){
+            alert($("input").val());
+        })
+        $("#f").click(function(){
+            alert($("a").attr("href"));
+        })
+
+    })
+</script>
