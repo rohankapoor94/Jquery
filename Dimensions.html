@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click Me</button>
+    <div id="div1" style="background-color: orange;padding: 10px;border: 10.8px solid red;margin: 2px;">Hi</div>
+    <span></span>
+</body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        // $("button").click(function(){
+        //     $("button").css("background-color","red")
+        // })
+        
+        // $("button").dblclick(function(){
+        //     $("button").css("background-color","orange")
+        // })
+        // $("button").mouseenter(function(){
+        //     $("button").css("color","white")
+        // })
+        // $("button").mouseleave(function(){
+        //     $("button").css("color","yellow")
+        // })
+        // $("body").hover(function(){
+        //     $("body").css("background-color","red")},
+        //         function(){$("body").css("background-color","white")
+        // })
+        $("button").on({
+            click:function(){
+                $(this).css("background-color","red");
+            },
+            dblclick:function(){
+                $(this).css("background-color","white")
+            },
+            mouseenter:function(){
+                $(this).css("color","black")
+            },
+            mouseleave:function(){
+                $(this).css("color","white")
+            },
+            // click:function(){
+            //     var text="";
+            //     text+= "Height : "+ $("#div1").height()+ "<br>";
+            //     text+="Width : " + $("#div1").width();
+            //     $("#div1").text(text);
+            // }
+            click:function(){
+                // var height=$("div").height(100);
+                // var width=$("div").width(100);
+                // Instend of Two Lines Use Chainning
+                $("div").height(100).width(100);
+                var innerHeight="Inner Height "+$("div").innerHeight()+"\n";
+                var innerwidth="Inner Width"+$("div").innerWidth();
+                var outerHeight="Outer Height"+$("div").outerHeight();//The outerWidth(true) method returns the width of an element (includes padding, border, and margin).
+                var outerwidth="Outer Width"+$("div").outerWidth(true);// The outerWidth() method returns the width of an element (includes padding and border).
+                $("div").text(innerHeight+innerwidth+outerHeight+outerwidth);
+                var wsize="Window Height "+$(window).height();
+                var wsiz="Window Height "+$(document).width();
+                $("span").text(wsize+wsiz);
+
+            }
+        })
+
+
+    })
+</script>
+<!-- $(window).height() gets you an unit-less pixel value of the height of the (browser) window aka viewport. With respect to the web browsers the viewport here is visible portion of the canvas(which often is smaller than the document being rendered).
+
+$(document).height() returns an unit-less pixel value of the height of the document being rendered. However, if the actual document’s body height is less than the viewport height then it will return the viewport height instead. -->
