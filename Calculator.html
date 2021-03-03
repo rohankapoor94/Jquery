@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div>
+          <div>
+              <input type="text" id="display" placeholder="0" class='mx-2 my-2  form-control' style="width: 290px; height: 48px;" >
+
+          </div>
+          <div style="float: left; " class="mx-2 my-2"><button value="+" class="btn btn-primary clck px-4">+</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="-" class="btn btn-primary clck px-4">-&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="*" class="btn btn-primary clck px-4">*&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button  value="/" class="btn btn-primary clck px-4">/&nbsp;</button></div>
+          <div style="clear: both; float: left; " class="mx-2 my-2"><button value="7" class="btn btn-primary clck px-4">7</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="8" class="btn btn-primary clck px-4">8&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="9" class="btn btn-primary clck px-4">9&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button  class="btn btn-primary finans px-4" >=</button></div>
+          <div style="clear: both; float: left; " class="mx-2 my-2"><button value="4" class="btn btn-primary clck px-4">4</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="5" class="btn btn-primary clck px-4">5&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="6" class="btn btn-primary clck px-4">6&nbsp;</button></div>
+          <div style="clear: both; float: left; " class="mx-2 my-2"><button value="1" class="btn btn-primary clck px-4">1</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="2" class="btn btn-primary clck px-4">2&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="3" class="btn btn-primary clck px-4">3&nbsp;</button></div>
+          <div style="clear: both; float: left; " class="mx-2 my-2"><button value="0" class="btn btn-primary clck px-4">0</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button value="." class="btn btn-primary clck px-4">.&nbsp;&nbsp;</button></div>
+          <div style="float: left; " class="mx-2 my-2"><button class="btn btn-primary clear px-4">C&nbsp;</button></div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function(){
+        $(".clck").click(function(){
+            $("#display").val($('#display').val()+$(this).val());
+        })
+        $('.clear').click(function(){
+            $('#display').val('0');
+        })
+        $('.finans').click(function(){
+            $("#display").val(eval($('#display').val()));
+        })
+    })
+</script>
